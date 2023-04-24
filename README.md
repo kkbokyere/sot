@@ -5,7 +5,7 @@ The front-end code for the Sports On Tap test app. Built in [React](https://reac
 
 ## Requirements
 
-- [Node](https://nodejs.org/en/).
+- [Node v18](https://nodejs.org/en/).
 - [npm](https://www.npmjs.com/package/npm).
 
 ## Getting Started
@@ -52,8 +52,6 @@ No CI/CD pipeline at the moment.
 - [React](https://reactjs.org/)
 - [Create React App](https://create-react-app.dev/)
 - [Redux](https://redux.js.org)
-- [Redux Thunk](https://github.com/reduxjs/redux-thunk)
-- [CSS Modules](https://github.com/css-modules/css-modules)
 
 # Architecture
 
@@ -74,4 +72,3 @@ Everything about my approach, is forward thinking towards scaling this applicati
 - implement typescript to better type definitions
 - Would have considered creating a proper [SMACSS](http://smacss.com/) architecture for base CSS styles such as layout.
 - better memoization of redux state and react components to stop constant re rendering (useCallback / useMemo)
-- Would only mad data which is relevant
