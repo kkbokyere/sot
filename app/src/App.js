@@ -5,7 +5,7 @@ import { WS_URL } from "./config";
 function App() {
     const ws = new WebSocket(WS_URL, 'ws');
 
-    const [clock, setClock] = useState('');
+    const [clock, setClock] = useState(0);
 
     ws.onopen = (event) => {
         const msg = {
