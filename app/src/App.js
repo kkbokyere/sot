@@ -4,6 +4,7 @@ import { WS_URL } from "./config";
 import Clock from "./components/Clock";
 import Player from "./components/Player";
 import Status from "./components/Status";
+import PlayerContainer from "./containers/PlayerContainer";
 const startMsg = {
     cmd: "start"
 }
@@ -25,12 +26,12 @@ function App() {
 
             ws.onmessage = (event) => {
                 const json = JSON.parse(event.data);
-                console.log(json)
                 try {
                     if ((json.event = "data")) {
                         const { clock, events } = json;
                         const secs = Math.floor((new Date(clock).getTime() - startTime.getTime()) / 1000)
                         setClock(secs);
+                        setEvents(events)
                     }
                 } catch (err) {
                     console.log(err)
@@ -45,10 +46,7 @@ function App() {
       <header className="App-header">
         <h1>Sports On Tap App</h1>
           <Clock time={clock}/>
-          <div className='player-container'>
-              <Player name={'Player A'} type={'home'} score={0}/>
-              <Player name={'Player B'} type={'away'} score={0}/>
-          </div>
+          <PlayerContainer events={events}/>
           <Status/>
       </header>
     </div>

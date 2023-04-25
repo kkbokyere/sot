@@ -59,8 +59,8 @@ No CI/CD pipeline at the moment.
 
 # Improvements / Retrospective Review
 
-- Would have used Cypress for E2E testing
-- 100% test coverage
+- Moved all state handling into redux to allow much cleaner flow of data, code quality and immutablity
+- Better testing
 - create a better Error handler
 - implement typescript to better type definitions
 - better memoization of redux state and react components to stop constant re rendering (useCallback / useMemo)
