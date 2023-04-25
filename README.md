@@ -53,12 +53,16 @@ No CI/CD pipeline at the moment.
 - [Create React App](https://create-react-app.dev/)
 - [Redux](https://redux.js.org)
 
+# What Went Well
+- I manage dto connect to the socket
+- I worked on a solution to display the results of the points and the sets for each event
+
 # Issues
 - When send my initial start message to the websocket, it's not consistent in sending back any match updates so its initially difficult to capture any real match updates
 - How do I know when to stop the match
 
 # Improvements / Retrospective Review
-
+- fully complete the test to include the actual logic that isn't given by the api
 - Moved all state handling into redux to allow much cleaner flow of data, code quality and immutablity
 - Better testing
 - create a better Error handler
