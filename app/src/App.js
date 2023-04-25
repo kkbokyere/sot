@@ -1,13 +1,11 @@
 import { useEffect, useState } from "react";
-import './App.css';
+import './App.scss';
 import { WS_URL } from "./config";
 import Clock from "./components/Clock";
 import Player from "./components/Player";
+import Status from "./components/Status";
 const startMsg = {
-    cmd: "start",
-    opts: {
-        speed: 60
-    }
+    cmd: "start"
 }
 const stopMsg = {
     cmd: 'stop'
@@ -47,8 +45,11 @@ function App() {
       <header className="App-header">
         <h1>Sports On Tap App</h1>
           <Clock time={clock}/>
-          <Player name={'Player A'} type={'home'} score={0}/>
-          <Player name={'Player B'} type={'away'} score={0}/>
+          <div className='player-container'>
+              <Player name={'Player A'} type={'home'} score={0}/>
+              <Player name={'Player B'} type={'away'} score={0}/>
+          </div>
+          <Status/>
       </header>
     </div>
   );

@@ -1,10 +1,15 @@
 import React from 'react'
+import './Player.scss';
 
-const Player = ({ name, score }) => {
+const Player = ({ score, type }) => {
     return(
         <div className='player'>
-            <span>Name: {name}</span>
-            <span>Score: {score}</span>
+            <span>{type}</span>
+            <ul className='player-sets'>
+                <li>0</li>
+                <li>0</li>
+                <li>0</li>
+            </ul>
         </div>
     );
 }

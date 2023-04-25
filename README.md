@@ -53,16 +53,9 @@ No CI/CD pipeline at the moment.
 - [Create React App](https://create-react-app.dev/)
 - [Redux](https://redux.js.org)
 
-# Architecture
-
-Everything about my approach, is forward thinking towards scaling this application.
-
-## State Management vs UI
-- The idea is to simply think about a high level separation of concern. If Redux was to become obsolete, or we decided to use a different state management library, the 'state' folder can simple be updated to accommodate this. And it can be come in small incremental pieces.
-
-## Ducks
-- I wanted to create a certain level of separation of concern, without having to over engineer.
-- The solution I decided to use was the [Ducks](https://github.com/erikras/ducks-modular-redux) concept, but in a more scalable way which essentially allowed me to bundle reducers, actions and action types.
+# Issues
+- When send my initial start message to the websocket, it's not consistent in sending back any match updates so its initially difficult to capture any real match updates
+- How do I know when to stop the match
 
 # Improvements / Retrospective Review
 
@@ -70,5 +63,4 @@ Everything about my approach, is forward thinking towards scaling this applicati
 - 100% test coverage
 - create a better Error handler
 - implement typescript to better type definitions
-- Would have considered creating a proper [SMACSS](http://smacss.com/) architecture for base CSS styles such as layout.
 - better memoization of redux state and react components to stop constant re rendering (useCallback / useMemo)
